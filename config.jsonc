@@ -2,16 +2,14 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
-    "mod": "dock", // The bar is always visible
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/clock"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
-        "on-click": "activate",
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -25,8 +23,8 @@
             "urgent": "",
             "focused": "",
             "default": ""
-         }
-     },
+        }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -84,8 +82,6 @@
         "spacing": 10
     },
     "custom/clock": {
-        // "timezone": "America/New_York",
-        "custom/clock": {
         "exec": "echo '  '$(date +'%H:%M')'  '",
         "interval": 5
     },
@@ -99,7 +95,7 @@
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        // "critical-threshold": 80,
+        "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
@@ -167,4 +163,3 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }
-
