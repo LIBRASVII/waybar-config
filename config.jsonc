@@ -5,24 +5,60 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media", "custom/clock"],
+    "modules-left": [
+        "hyprland/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
+        "custom/media",
+        "custom/clock",
+    ],
+
     "modules-center": ["hyprland/window"],
-    "modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+
+    "modules-right": [
+        "mpd",
+        "idle_inhibitor",
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "keyboard-state",
+        "sway/language",
+        "battery",
+        "battery#bat2",
+        "clock",
+        "tray"
+    ],
     // Modules configuration
+   // [{
+   //      "layer": "top",
+   //      "position": "left",
+   //      "output": ["DP-1"],
+   //
+   //      "include": [
+   //          "~/.config/waybar/modules/clock.json"
+   //      ],
+   //      "modules-right": [
+   //          "clock"
+   //      ]
+   //  }],
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}: {icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            // "1": "",
+            // "2": "󰈹",
+            // "3": "",
+            // "4": "",
+            // "5": "",
+            // "urgent": "",
+            // "focused": "",
+            // "default": ""
         }
     },
     "keyboard-state": {
@@ -83,7 +119,8 @@
     },
     "custom/clock": {
         "exec": "echo '  '$(date +'%H:%M')'  '",
-        "interval": 5
+        "interval": 1,
+        "tooltip": false
     },
     "cpu": {
         "format": "{usage}% ",
