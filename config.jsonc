@@ -10,7 +10,7 @@
         "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "custom/clock",
+        "custom/clock"
     ],
 
     "modules-center": ["hyprland/window"],
@@ -44,21 +44,17 @@
    //          "clock"
    //      ]
    //  }],
-
-    "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
-        "format-icons": {
-            // "1": "",
-            // "2": "󰈹",
-            // "3": "",
-            // "4": "",
-            // "5": "",
-            // "urgent": "",
-            // "focused": "",
-            // "default": ""
+   "hyprland/workspaces": {
+	"on-click": "activate",
+	"format": "{icon}",
+	"format-icons": {
+		"default": "",
+		"1": "",
+		"2": "",
+		"3": "",
+		"4": "",
+		"active": "󱓻",
+		"urgent": "󱓻"
         }
     },
     "keyboard-state": {
