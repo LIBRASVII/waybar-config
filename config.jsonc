@@ -31,32 +31,20 @@
         "clock",
         "tray"
     ],
-    // Modules configuration
-   // [{
-   //      "layer": "top",
-   //      "position": "left",
-   //      "output": ["DP-1"],
-   //
-   //      "include": [
-   //          "~/.config/waybar/modules/clock.json"
-   //      ],
-   //      "modules-right": [
-   //          "clock"
-   //      ]
-   //  }],
-   "hyprland/workspaces": {
-	"on-click": "activate",
-	"format": "{icon}",
-	"format-icons": {
-		"default": "",
-		"1": "",
-		"2": "",
-		"3": "",
-		"4": "",
-		"active": "󱓻",
-		"urgent": "󱓻"
-        }
-    },
+
+ //   "hyprland/workspaces": {
+	// "on-click": "activate",
+	// "format": "{icon}",
+	// "format-icons": {
+	// 	"default": "",
+	// 	"1": "",
+	// 	"2": "",
+	// 	"3": "",
+	// 	"4": "",
+	// 	"active": "󱓻",
+	// 	"urgent": "󱓻"
+ //        }
+ //    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
