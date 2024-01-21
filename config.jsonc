@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "width": 1300, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -32,19 +32,11 @@
         "tray"
     ],
 
- //   "hyprland/workspaces": {
-	// "on-click": "activate",
-	// "format": "{icon}",
-	// "format-icons": {
-	// 	"default": "",
-	// 	"1": "",
-	// 	"2": "",
-	// 	"3": "",
-	// 	"4": "",
-	// 	"active": "󱓻",
-	// 	"urgent": "󱓻"
- //        }
- //    },
+   "hyprland/workspaces": {
+	"on-click": "activate",
+	"format": "{icon}"
+    },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,

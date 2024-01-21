@@ -5,12 +5,12 @@
 }
 
 window#waybar {
-  background-color: rgba(100, 1, 62, 0.26);
-  border-bottom: 3px solid rgba(99, 114, 125, 0.5);
+  background-color: rgba(10, 181, 102, 0.06);
+  border-bottom: 3px solid rgba(249, 44, 95, 0.5);
   padding: 10px;
   color: #ffffff;
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: .5s;
 }
 
 window.bar1#waybar {
@@ -32,7 +32,7 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-  background-color: #3f3f3f;
+  background-color: #fd8f17;
 }
 
 window#waybar.chromium {
@@ -45,7 +45,7 @@ button {
   box-shadow: inset 0 -3px transparent;
   /* Avoid rounded borders under each button name */
   border: none;
-  border-radius: 0%;
+  border-radius: 10%;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -56,17 +56,14 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 3px;
-  border-radius: 70%;
+  padding: 1px;
   border-radius: 0px;
-  border: none;
-  background-color: transparent;
-  box-shadow: none;
+  border: solid;
   color: #9bffff;
 }
 
 #workspaces button:hover {
-  background: rgba(180, 50, 230, 0.2);
+  background: rgba(90, 0, 230, 0.2);
 }
 
 #workspaces button.active {
@@ -122,8 +119,10 @@ button:hover {
 }
 
 #clock {
-  background-color: #64723d;
-  border-radius: 3px;
+  background-color: transparent;
+  border: 0.2rem;
+  border-radius: 9px;
+  border-style: inset;
   border-color: #f53c3c;
 }
 
