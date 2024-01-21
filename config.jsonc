@@ -10,14 +10,15 @@
         "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "custom/clock"
+        "clock#date",
+        "clock#time"
     ],
 
     "modules-center": ["hyprland/window"],
 
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
+        // "idle_inhibitor",
         "pulseaudio",
         "network",
         "cpu",
@@ -28,7 +29,6 @@
         "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray"
     ],
 
@@ -93,10 +93,15 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "custom/clock": {
+    "clock#date": {
+        "interval": 10,
+        "format": " {:%e %b %Y}", // Icon: calendar-alt
+        "tooltip-format": "{:%e %B %Y}"
+    },
+    "clock#time": {
         "exec": "echo '  '$(date +'%H:%M')'  '",
         "interval": 1,
-        "tooltip": false
+        "tooltip": true
     },
     "cpu": {
         "format": "{usage}% ",
@@ -172,7 +177,8 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "$HOME/.config/waybar/get_media.sh"
+        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }

@@ -22,15 +22,6 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 window#waybar.termite {
   background-color: #fd8f17;
 }
@@ -120,10 +111,8 @@ button:hover {
 
 #clock {
   background-color: transparent;
-  border: 0.2rem;
-  border-radius: 9px;
-  border-style: inset;
-  border-color: #f53c3c;
+  border: none;
+  padding: 3px;
 }
 
 #battery {
