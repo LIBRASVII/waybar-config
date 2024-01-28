@@ -2,23 +2,25 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 20, // Waybar height (to be removed for auto height)
-    "width": 1300, // Waybar width
+    "width": 1350, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
+    "margin-top": 1,
+    "margin-bottom": 1,
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
         "sway/mode",
         "sway/scratchpad",
         "custom/media",
-        "clock#date",
-        "clock#time"
+        "hyprland/window"
     ],
 
-    "modules-center": ["hyprland/window"],
+    "modules-center": [
+        "clock"
+    ],
 
     "modules-right": [
         "mpd",
-        // "idle_inhibitor",
         "pulseaudio",
         "network",
         "cpu",
@@ -93,15 +95,9 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock#date": {
-        "interval": 10,
-        "format": " {:%e %b %Y}", // Icon: calendar-alt
-        "tooltip-format": "{:%e %B %Y}"
-    },
-    "clock#time": {
-        "exec": "echo '  '$(date +'%H:%M')'  '",
-        "interval": 1,
-        "tooltip": true
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
         "format": "{usage}% ",
